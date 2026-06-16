@@ -32,7 +32,7 @@ const translations = {
     map: {
       eyebrow: "Karte",
       title: "Löfengut in St. Florian",
-      link: "In Google Maps öffnen",
+      link: "In OpenStreetMap öffnen",
     },
     space: {
       eyebrow: "Auf einen Blick",
@@ -103,7 +103,7 @@ const translations = {
     map: {
       eyebrow: "Map",
       title: "Löfengut in St. Florian",
-      link: "Open in Google Maps",
+      link: "Open in OpenStreetMap",
     },
     space: {
       eyebrow: "At a glance",
@@ -148,6 +148,10 @@ const translations = {
 
 const metaDescription = document.querySelector("#meta-description");
 const langButtons = document.querySelectorAll(".lang-button");
+const lightbox = document.querySelector("#image-lightbox");
+const lightboxImage = lightbox?.querySelector("img");
+const lightboxCaption = lightbox?.querySelector("figcaption");
+const lightboxClose = lightbox?.querySelector(".image-lightbox-close");
 
 function getValue(language, key) {
   return key.split(".").reduce((value, part) => {
@@ -198,6 +202,60 @@ langButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setLanguage(button.dataset.lang || defaultLanguage);
   });
+});
+
+function closeLightbox() {
+  if (!lightbox) {
+    return;
+  }
+
+  if (typeof lightbox.close === "function" && lightbox.open) {
+    lightbox.close();
+  } else {
+    lightbox.classList.remove("is-open");
+  }
+}
+
+function openLightbox(image) {
+  if (!lightbox || !lightboxImage || !lightboxCaption) {
+    return;
+  }
+
+  const caption = image.closest("figure")?.querySelector("figcaption")?.textContent || image.alt;
+
+  lightboxImage.src = image.currentSrc || image.src;
+  lightboxImage.alt = image.alt;
+  lightboxCaption.textContent = caption;
+
+  if (typeof lightbox.showModal === "function") {
+    lightbox.showModal();
+  } else {
+    lightbox.classList.add("is-open");
+  }
+}
+
+document.querySelectorAll(".hero-card img, .gallery-card img").forEach((image) => {
+  image.setAttribute("tabindex", "0");
+  image.setAttribute("role", "button");
+
+  image.addEventListener("click", () => {
+    openLightbox(image);
+  });
+
+  image.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openLightbox(image);
+    }
+  });
+});
+
+lightboxClose?.addEventListener("click", closeLightbox);
+
+lightbox?.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
 });
 
 const storedLanguage = localStorage.getItem("site-language");
