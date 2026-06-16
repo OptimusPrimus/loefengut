@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Löfengut Apartment</title>
+    <meta
+      id="meta-description"
+      name="description"
+      content="Ein ruhiges Apartment im Löfengut in Oberösterreich mit historischem Charakter, modernem Komfort und direkter Kontaktmöglichkeit."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand-block">
+          <p class="eyebrow" data-i18n="header.eyebrow">Apartment</p>
+          <h1 data-i18n="header.title">Löfengut</h1>
+        </div>
+        <div class="header-actions">
+          <nav class="site-nav">
+            <a href="#gallery" data-i18n="nav.gallery">Galerie</a>
+            <a href="#location" data-i18n="nav.location">Lage</a>
+            <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+          </nav>
+          <div class="language-switch" aria-label="Language switch">
+            <button type="button" class="lang-button is-active" data-lang="de">DE</button>
+            <button type="button" class="lang-button" data-lang="en">EN</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Ruhiger Lage in St. Florian bei Linz</p>
+            <h3 data-i18n="hero.title" data-i18n-html>Das Apartment...</h3>
+            <p class="hero-text" data-i18n="hero.text">
+              ... liegt in Unterweidlham bei St. Florian. Es eignet sich ideal als Unterkunft bei Veranstaltungen in der Nähe, etwa im Stift St. Florian oder auf Schloss Tillysburg. Rad- und Wanderwege befinden sich in der Umgebung. Linz, Enns, Steyr und das Salzkammergut sind mit dem Auto gut erreichbar. Durch die Nähe zur A1 Autobahn ist es auch ideal für Durchreisende.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact" data-i18n="hero.ctaPrimary">Verfügbarkeit anfragen</a>
+              <a class="button button-secondary" href="#gallery" data-i18n="hero.ctaSecondary">Fotos ansehen</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <img src="images/hof.jpeg" alt="Illustrated apartment exterior placeholder" />
+          </div>
+        </section>
+
+        <section class="info-strip" id="overview">
+          <article>
+            <span data-i18n="overview.location.label">Ort</span>
+            <strong data-i18n="overview.location.value">St. Florian, Oberösterreich</strong>
+          </article>
+          <article>
+            <span data-i18n="overview.setting.label">Lage</span>
+            <strong data-i18n="overview.setting.value">Ländlich</strong>
+          </article>
+          <article>
+            <span data-i18n="overview.layout.label">Aufteilung</span>
+            <strong data-i18n="overview.layout.value">Apartment auf 2 Etagen</strong>
+          </article>
+          <article>
+            <span data-i18n="overview.atmosphere.label">Atmosphäre</span>
+            <strong data-i18n="overview.atmosphere.value">Ruhig, schlicht, Blick ins Grüne</strong>
+          </article>
+        </section>
+
+        <section class="location-contact">
+          <div class="panel detail-panel">
+            <p class="eyebrow" data-i18n="space.eyebrow">Auf einen Blick</p>
+            <h3 data-i18n="space.title">Die Unterkunft</h3>
+            <dl class="detail-list">
+              <div>
+                <dt data-i18n="space.floors.label">Etagen</dt>
+                <dd data-i18n="space.floors.value">2</dd>
+              </div>
+              <div>
+                <dt data-i18n="space.bedroom.label">Schlafzimmer</dt>
+                <dd data-i18n="space.bedroom.value">1 großes Doppelbett</dd>
+              </div>
+              <div>
+                <dt data-i18n="space.bathroom.label">Badezimmer</dt>
+                <dd data-i18n="space.bathroom.value">Dusche und Badewanne</dd>
+              </div>
+              <div>
+                <dt data-i18n="space.living.label">Wohnbereich</dt>
+                <dd data-i18n="space.living.value">Bücher, Brettspiele, Zugang zur Terrasse</dd>
+              </div>
+              <div>
+                <dt data-i18n="space.tv.label">TV</dt>
+                <dd data-i18n="space.tv.value">Nicht vorhanden</dd>
+              </div>
+              <div>
+                <dt data-i18n="space.pets.label">Haustiere</dt>
+                <dd data-i18n="space.pets.value">Auf Anfrage, Reinigungsgebühr fällt an</dd>
+              </div>
+            </dl>
+          </div>
+
+        </section>
+
+        <section class="gallery-section" id="gallery">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="gallery.eyebrow">Galerie</p>
+            <h3 data-i18n="gallery.title">Apartment und Umgebung</h3>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-card gallery-card-large">
+              <img src="images/wohnzimmer.jpeg" alt="Living room placeholder image" />
+              <figcaption data-i18n="gallery.living">Wohnbereich</figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="images/kueche.jpeg" alt="Kitchen placeholder image" />
+              <figcaption data-i18n="gallery.kitchen">Küche</figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="images/schlafzimmer.jpeg" alt="Bedroom placeholder image" />
+              <figcaption data-i18n="gallery.bedroom">Schlafzimmer</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+              <img src="images/bad.jpeg" alt="Bathroom placeholder image" />
+              <figcaption data-i18n="gallery.bathroom">Badezimmer</figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="images/badewanne.jpeg" alt="Neighborhood placeholder image" />
+              <figcaption data-i18n="gallery.neighborhood">Umgebung</figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="images/garten.jpeg" alt="Neighborhood placeholder image" />
+              <figcaption data-i18n="gallery.neighborhood">Umgebung</figcaption>
+            </figure>
+
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel map-panel" id="location">
+            <p class="eyebrow" data-i18n="map.eyebrow">Karte</p>
+            <h3 data-i18n="map.title">Löfengut in St. Florian</h3>
+            <div class="map-embed">
+              <iframe
+                title="Map showing Löfengut in St. Florian, Upper Austria"
+                src="https://www.google.com/maps?q=L%C3%B6fengut%2C%20St.%20Florian%2C%20Ober%C3%B6sterreich&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <a
+              class="map-link"
+              href="https://www.google.com/maps/search/?api=1&query=L%C3%B6fengut%2C%20St.%20Florian%2C%20Ober%C3%B6sterreich"
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="map.link"
+            >
+              In Google Maps öffnen
+            </a>
+          </div>
+
+
+          <div class="panel contact-panel" id="contact">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
+            <h3 data-i18n="contact.title">Direkte Anfragen</h3>
+            <p data-i18n="contact.text">
+              Für Anfragen zur Verfügbarkeit erreichen Sie uns direkt per E-Mail oder Telefon.
+            </p>
+
+            <div class="contact-methods">
+              <a href="mailto:contact@loefengut.at">contact@loefengut.at</a>
+            </div>
+
+            <a class="button button-primary" href="mailto:contact@loefengut.at" data-i18n="contact.emailButton">
+              E-Mail-Anfrage senden
+            </a>
+          </div>
+
+        </section>
+
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
