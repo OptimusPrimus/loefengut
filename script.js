@@ -51,6 +51,7 @@ const translations = {
       bedroom: "Schlafzimmer",
       kitchen: "Küche",
       bathroom: "Badezimmer",
+      bathtub: "Badewanne",
       neighborhood: "Umgebung",
     },
     location: {
@@ -121,6 +122,7 @@ const translations = {
       bedroom: "Bedroom",
       kitchen: "Kitchen",
       bathroom: "Bathroom",
+      bathtub: "Bathtub",
       neighborhood: "Surroundings",
     },
     location: {
