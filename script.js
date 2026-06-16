@@ -31,7 +31,7 @@ const translations = {
     },
     map: {
       eyebrow: "Karte",
-      title: "Anfahrt",
+      title: "Löfengut in St. Florian",
       link: "In OpenStreetMap öffnen",
     },
     space: {
@@ -42,11 +42,13 @@ const translations = {
       bathroom: { label: "Badezimmer", value: "Dusche und Badewanne" },
       living: { label: "Wohnbereich", value: "Brettspiele, Zugang zur Terrasse" },
       tv: { label: "TV", value: "Nicht vorhanden" },
-      pets: { label: "Haustiere", value: "Auf Anfrage" },
+      pets: { label: "Haustiere", value: "Nach vorheriger Absprache" },
+      pricePerNight: { label: "Preis pro Nacht", value: "90 €" },
+      cityTax: { label: "Ortstaxe", value: "2,40 € pro Person und Nacht" },
     },
     gallery: {
       eyebrow: "Bilder",
-      title: "Galerie",
+      title: "Apartment und Umgebung",
       living: "Wohnbereich",
       bedroom: "Schlafzimmer",
       kitchen: "Küche",
@@ -102,7 +104,7 @@ const translations = {
     },
     map: {
       eyebrow: "Map",
-      title: "Directions",
+      title: "Löfengut in St. Florian",
       link: "Open in OpenStreetMap",
     },
     space: {
@@ -113,11 +115,13 @@ const translations = {
       bathroom: { label: "Bathroom", value: "Shower and bathtub" },
       living: { label: "Living area", value: "Board games, terrace access" },
       tv: { label: "TV", value: "Not available" },
-      pets: { label: "Pets", value: "On request" },
+      pets: { label: "Pets", value: "By prior arrangement" },
+      pricePerNight: { label: "Price per night", value: "EUR 90" },
+      cityTax: { label: "City tax", value: "EUR 2.40 per person per night" },
     },
     gallery: {
       eyebrow: "Pictures",
-      title: "Gallery",
+      title: "Apartment and surroundings",
       living: "Living area",
       bedroom: "Bedroom",
       kitchen: "Kitchen",
