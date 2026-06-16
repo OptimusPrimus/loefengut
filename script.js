@@ -69,7 +69,7 @@ const translations = {
     contact: {
       eyebrow: "Kontakt",
       title: "Direkte Anfragen",
-      text: "Für Anfragen zur Verfügbarkeit erreichen Sie uns direkt per E-Mail oder Telefon.",
+      text: "Für Anfragen zur Verfügbarkeit erreichen Sie uns direkt per E-Mail.",
       emailButton: "E-Mail-Anfrage senden",
     },
   },
@@ -140,7 +140,7 @@ const translations = {
     contact: {
       eyebrow: "Contact",
       title: "Direct inquiries",
-      text: "For availability inquiries, contact us directly by email or phone.",
+      text: "For availability inquiries, contact us directly by email.",
       emailButton: "Send email inquiry",
     },
   },
