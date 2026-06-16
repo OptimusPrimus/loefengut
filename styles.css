@@ -417,6 +417,8 @@ img {
   grid-template-rows: minmax(0, 1fr) auto;
   max-height: calc(100vh - 32px);
   margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .image-lightbox img {
@@ -424,7 +426,6 @@ img {
   max-height: calc(100vh - 92px);
   object-fit: contain;
   background: #111820;
-  cursor: pointer;
 }
 
 .image-lightbox figcaption {

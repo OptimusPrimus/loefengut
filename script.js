@@ -153,6 +153,7 @@ const translations = {
 const metaDescription = document.querySelector("#meta-description");
 const langButtons = document.querySelectorAll(".lang-button");
 const lightbox = document.querySelector("#image-lightbox");
+const lightboxFigure = lightbox?.querySelector("figure");
 const lightboxImage = lightbox?.querySelector("img");
 const lightboxCaption = lightbox?.querySelector("figcaption");
 const lightboxClose = lightbox?.querySelector(".image-lightbox-close");
@@ -277,8 +278,12 @@ previewImages.forEach((image) => {
 
 lightboxClose?.addEventListener("click", closeLightbox);
 
-lightboxImage?.addEventListener("click", (event) => {
-  const { left, width } = lightboxImage.getBoundingClientRect();
+lightboxFigure?.addEventListener("pointerup", (event) => {
+  if (event.target === lightboxCaption) {
+    return;
+  }
+
+  const { left, width } = lightboxFigure.getBoundingClientRect();
   const direction = event.clientX - left < width / 2 ? -1 : 1;
 
   showLightboxImage(direction);
