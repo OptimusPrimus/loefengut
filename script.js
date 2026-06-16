@@ -54,7 +54,7 @@ const translations = {
       kitchen: "Küche",
       bathroom: "Badezimmer",
       bathtub: "Badewanne",
-      neighborhood: "Terasse",
+      neighborhood: "Terrasse",
     },
     location: {
       eyebrow: "Lage",
