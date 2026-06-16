@@ -156,6 +156,8 @@ const lightbox = document.querySelector("#image-lightbox");
 const lightboxImage = lightbox?.querySelector("img");
 const lightboxCaption = lightbox?.querySelector("figcaption");
 const lightboxClose = lightbox?.querySelector(".image-lightbox-close");
+const previewImages = [...document.querySelectorAll(".hero-card img, .gallery-card img")];
+let currentLightboxIndex = -1;
 
 function getValue(language, key) {
   return key.split(".").reduce((value, part) => {
@@ -220,7 +222,7 @@ function closeLightbox() {
   }
 }
 
-function openLightbox(image) {
+function setLightboxImage(image) {
   if (!lightbox || !lightboxImage || !lightboxCaption) {
     return;
   }
@@ -230,6 +232,25 @@ function openLightbox(image) {
   lightboxImage.src = image.currentSrc || image.src;
   lightboxImage.alt = image.alt;
   lightboxCaption.textContent = caption;
+}
+
+function showLightboxImage(direction) {
+  if (!previewImages.length || currentLightboxIndex < 0) {
+    return;
+  }
+
+  currentLightboxIndex =
+    (currentLightboxIndex + direction + previewImages.length) % previewImages.length;
+  setLightboxImage(previewImages[currentLightboxIndex]);
+}
+
+function openLightbox(image) {
+  if (!lightbox || !lightboxImage || !lightboxCaption) {
+    return;
+  }
+
+  currentLightboxIndex = previewImages.indexOf(image);
+  setLightboxImage(image);
 
   if (typeof lightbox.showModal === "function") {
     lightbox.showModal();
@@ -238,7 +259,7 @@ function openLightbox(image) {
   }
 }
 
-document.querySelectorAll(".hero-card img, .gallery-card img").forEach((image) => {
+previewImages.forEach((image) => {
   image.setAttribute("tabindex", "0");
   image.setAttribute("role", "button");
 
@@ -255,6 +276,13 @@ document.querySelectorAll(".hero-card img, .gallery-card img").forEach((image) =
 });
 
 lightboxClose?.addEventListener("click", closeLightbox);
+
+lightboxImage?.addEventListener("click", (event) => {
+  const { left, width } = lightboxImage.getBoundingClientRect();
+  const direction = event.clientX - left < width / 2 ? -1 : 1;
+
+  showLightboxImage(direction);
+});
 
 lightbox?.addEventListener("click", (event) => {
   if (event.target === lightbox) {

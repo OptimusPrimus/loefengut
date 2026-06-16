@@ -424,6 +424,7 @@ img {
   max-height: calc(100vh - 92px);
   object-fit: contain;
   background: #111820;
+  cursor: pointer;
 }
 
 .image-lightbox figcaption {
